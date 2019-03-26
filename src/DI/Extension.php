@@ -37,6 +37,16 @@ class Extension extends Nette\DI\CompilerExtension
                     [$this->prefix('@filejet'), 'replaceImages']
                 ]
             );
+
+            $definition->addSetup(
+                'addFilter',
+                [
+                    $config['filterName']."_url",
+                    [$this->prefix('@filejet'), 'prefixImageSource']
+                ]
+            );
+
+
         }
     }
 }
