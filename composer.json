@@ -5,11 +5,13 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "FileJet\\Nette\\": "src/"
+      "FileJet\\Nette\\DI\\": "src/DI/",
+      "FileJet\\Nette\\FileJet\\External\\": "src/FileJetExternal/"
     }
   },
   "require": {
     "php": "^7.1",
-    "filejet/filejet-external-php": "dev-master"
+    "ext-dom": "*",
+    "ext-libxml": "*"
   }
 }
